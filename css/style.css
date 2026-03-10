@@ -1,131 +1,192 @@
-/* ================= GLOBAL ================= */
-body {
-  margin: 0;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #e6eaf0;   /* page background (gray) */
-  color: #222;
+body{
+margin:0;
+font-family:"Inter",sans-serif;
+background:#edf1f6;
+color:#222;
+line-height:1.6;
 }
 
-/* ================= HERO ================= */
-.hero {
-  background: linear-gradient(135deg, #0b5ed7, #0aa2c0);
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
+.hero{
+background-image:url("../images/Budapest-Parliament-0001.jpg");
+background-size:cover;
+background-position:center 35%;
+height:400px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+position:relative;
+color:white;
 }
 
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,0.22);
 }
 
-.hero h2 {
-  font-weight: 300;
-  max-width: 900px;
-  margin: 0 auto 30px;
+.hero-content{
+position:relative;
+z-index:2;
+max-width:1000px;
+margin:0 auto;
 }
 
-.hero-buttons .btn {
-  margin: 6px;
+.hero h1{
+font-size:64px;
+font-weight:700;
+margin:0 0 18px 0;
+letter-spacing:0.5px;
+text-shadow:0 2px 8px rgba(0,0,0,0.35);
 }
 
-/* ================= BUTTONS ================= */
-.btn {
-  display: inline-block;
-  padding: 10px 18px;
-  background: white;
-  color: #0b5ed7;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
+.hero h2{
+font-size:26px;
+font-weight:600;
+color:#ffffff;
+text-shadow:0 2px 6px rgba(0,0,0,0.45);
+line-height:1.5;
+max-width:900px;
+margin:auto;
 }
 
-.btn-outline {
-  background: transparent;
-  color: white;
-  border: 2px solid white;
+/* BUTTONS */
+
+.hero-buttons{
+margin-top:30px;
 }
 
-/* ================= SECTIONS (OUTER) ================= */
-.section {
-  max-width: 1000px;
-  margin: 70px auto;   /* spacing between sections */
-  padding: 0;          /* IMPORTANT: no background here */
+.btn{
+background:white;
+color:#0f5d86;
+padding:12px 20px;
+margin:5px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+display:inline-block;
 }
 
-/* ================= SECTION WHITE BLOCK (INNER) ================= */
-.section-inner {
-  background-color: #ffffff;
-  padding: 60px 40px;
-  border-radius: 14px;
+/* WELCOME */
 
-  border: 1px solid #dfe3e8;
-  box-shadow:
-    0 2px 6px rgba(0,0,0,0.05),
-    0 14px 40px rgba(0,0,0,0.08);
+.welcome{
+background:#eef3fb;
+padding:40px 20px;
 }
 
-/* ================= HEADINGS ================= */
-.section h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  color: #111;
+.welcome h2{
+text-align:center;
+margin-bottom:20px;
 }
 
-.section h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 3px;
-  background: #0b5ed7;
-  margin: 12px auto 0;
-  border-radius: 2px;
+.emnlp{
+text-align:center;
+font-weight:600;
 }
 
-/* ================= TEXT ================= */
-.section p,
-.section li {
-  color: #333;
+.emnlp a{
+color:#0f5d86;
+text-decoration:none;
 }
 
-/* ================= THEMES ================= */
-.themes li {
-  margin-bottom: 12px;
+/* CONTAINER */
+
+.container{
+max-width:1100px;
+margin:auto;
 }
 
-/* ================= SPEAKER CARDS ================= */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
+/* CARD */
+
+.card{
+background:white;
+padding:50px;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.06);
 }
 
-.card {
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+/* SECTIONS */
+
+.section{
+padding:60px 20px;
 }
 
-.card img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 10px;
+.section h2{
+text-align:center;
+margin-bottom:30px;
 }
 
-/* ================= ORGANIZERS ================= */
-.organizers li {
-  margin-bottom: 8px;
+.section h2::after{
+content:"";
+display:block;
+width:60px;
+height:3px;
+background:#1e88c8;
+margin:10px auto;
 }
 
-/* ================= FOOTER ================= */
-footer {
-  text-align: center;
-  padding: 25px;
-  background: #0b5ed7;
-  color: white;
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+/* SPEAKERS */
+
+.speaker{
+text-align:center;
+}
+
+
+
+.speaker img{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:10px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.speaker img:hover{
+transform:scale(1.08);
+}
+
+/* DATES */
+
+.dates li{
+margin-bottom:10px;
+}
+
+/* PC GRID */
+
+
+.pc-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px 40px;
+margin-top:20px;
+}
+
+.pc-grid p{
+margin:4px 0;
+font-size:15px;
+line-height:1.4;
+}
+
+/* FOOTER */
+
+footer{
+background:#0f5d86;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:50px;
 }
